@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/b2b3579752.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<title>Exercise</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="section-new-book">
+				<h2>Add A New Book</h2>
+				<div class="new-book-form">
+					<input type="text" class="book-title" placeholder="Book's Title" />
+					<input
+						type="text"
+						name="author"
+						class="author"
+						placeholder="author's name"
+					/>
+					<input
+						type="number"
+						name="pages"
+						class="pages"
+						placeholder="number of pages"
+					/>
+
+					<label for="status">Read?</label>
+					<input type="checkbox" name="status" id="status" class="status" />
+
+					<button class="add-book">Add Book</button>
+				</div>
+			</div>
+			<form class="search-form">
+				<input type="text" class="search" placeholder="City or State" />
+				<span class="number-of-search"></span>
+				<ul class="suggestions">
+					<li>Filter for a Book</li>
+					<li>or an author</li>
+				</ul>
+			</form>
+		</div>
+	</body>
+</html>
