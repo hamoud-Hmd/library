@@ -142,3 +142,21 @@ label {
 	color: red;
 	cursor: pointer;
 }
+
+.read {
+	color: green;
+	font-weight: bold;
+	font-size: 0.7rem;
+}
+.not-read {
+	color: red;
+	font-weight: bold;
+	font-size: 0.7rem;
+}
+
+.required {
+	/* outline: 4px solid red;
+	outline-style: inset; */
+	box-shadow: 0 0 4px 4px rgb(255, 0, 0, 0.4);
+	transition: all 0.5s ease;
+}
