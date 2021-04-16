@@ -145,13 +145,15 @@ label {
 
 .read {
 	color: green;
-	font-weight: bold;
-	font-size: 0.7rem;
 }
 .not-read {
 	color: red;
+}
+
+.change-status {
 	font-weight: bold;
 	font-size: 0.7rem;
+	cursor: pointer;
 }
 
 .required {

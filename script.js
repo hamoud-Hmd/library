@@ -68,7 +68,7 @@ function displayMatches() {
       <li>
         <span class="name">${title}, ${author}</span>
         <span class="population">${book.pages}</span>
-        <span class="${className}"> ${str} </span>
+        <span class="${className} change-status" id=${idx}> ${str} </span>
         <span> <i class="fas fa-trash" id=${idx}></i></span>
       </li>
     `;
@@ -77,13 +77,23 @@ function displayMatches() {
 
 	suggestions.innerHTML = html;
 	const allButtons = suggestions.querySelectorAll('.fa-trash');
-	console.log(allButtons);
+	const status = suggestions.querySelectorAll('.change-status');
+
 	allButtons.forEach(trash =>
 		trash.addEventListener('click', function () {
 			myLibrary.splice(this.id, 1);
 			this.parentElement.parentElement.remove();
 		})
 	);
+
+	status.forEach(state => {
+		state.addEventListener('click', function () {
+			myLibrary[this.id].read = !myLibrary[this.id].read;
+			this.textContent = myLibrary[this.id].read == true ? 'Read' : 'Not Read';
+			this.classList.toggle('read');
+			this.classList.toggle('not-read');
+		});
+	});
 }
 let isError = false;
 function addBookToLibrary() {
